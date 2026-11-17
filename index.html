@@ -295,6 +295,64 @@
     .skill-chips li{border:1px solid #b3aa95;background:#e7e1d2;padding:5px 9px;font-size:.73rem;border-radius:3px;line-height:1.6}
     @media(max-width:900px){.binder{grid-template-columns:minmax(0,1fr)}.rail{position:static;display:flex;flex-wrap:wrap;padding-top:14px}.side-tab{border-radius:5px}.paper-grid{grid-template-columns:1fr}.photo-area{position:static;max-width:500px;width:100%;margin:0 auto 10px}.header-controls{gap:8px}}
     @media(max-width:480px){.masthead{padding:0 3vw;grid-template-columns:auto 1fr}.mast-side{display:none}.home-link{font-size:1rem}.dossier-top{gap:12px}.dossier-top h1{font-size:2rem}.paper{padding:20px}.photo-heading{font-size:.5rem}}
+
+    .language-control select{font:inherit;font-size:.73rem;color:var(--cream);background:var(--base);border:1px solid #6b6a5c;padding:6px 9px;border-radius:20px;cursor:pointer;max-width:110px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .masthead,.binder,.paper-grid,.folders,.dossier-top{direction:ltr}
+    .header-controls{gap:10px}.masthead{height:auto;min-height:60px}
+    html[lang="ar"] .hero h1{font-family:var(--arabic);font-size:clamp(2rem,7vw,6rem);line-height:1.5;letter-spacing:0}
+    html[lang="ar"] .home-link{font-family:var(--arabic);letter-spacing:0;font-weight:800}
+    .contact-footer{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;font-family:var(--arabic);font-size:.8rem;padding-block:25px 35px}
+    .footer-social{display:flex;flex-direction:column;align-items:flex-start;gap:8px}.footer-social>a{color:#e1c58b;font-size:1rem}.footer-name{font-size:.65rem;opacity:.7}
+    .footer-contact{display:flex;flex-direction:column;align-items:flex-end;gap:9px;font-style:normal;text-align:right;overflow-wrap:anywhere}
+    .contact-footer a{min-height:30px;display:inline-flex;align-items:center}
+    @media(max-width:720px){.mast-side{display:none}.masthead{grid-template-columns:auto minmax(0,1fr);padding:10px 4vw;gap:12px}.header-controls{gap:7px;flex-wrap:wrap}.home-link{font-size:1rem}.nav-about{font-size:.7rem}#sound-toggle{font-size:.6rem;padding:5px 7px}.language-control select{font-size:.66rem;padding:5px 7px}}
+    @media(max-width:380px){.contact-footer{gap:14px}.footer-contact{font-size:.68rem}.header-controls{gap:5px}.home-link{font-size:.88rem}}
+
+    /* Professional profile */
+    .premium-profile{max-width:1160px;margin:50px auto 75px;padding:0 5vw}
+    .profile-shell{border:1px solid #545044;border-radius:5px;overflow:hidden;box-shadow:0 25px 90px #0003}
+    .profile-hero{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:55px;padding:clamp(30px,5vw,64px);background:radial-gradient(ellipse at 100% 0%,#d4b46d12,transparent 60%),#232621;color:#efe9da;position:relative}
+    .profile-hero::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#927644,#e4cf9a,#927644)}
+    .profile-eyebrow{display:flex;align-items:center;gap:10px;color:#dac18b;font-size:.72rem;margin:0 0 27px;letter-spacing:.04em}
+    .profile-dot,.location-dot{width:6px;height:6px;border-radius:50%;background:#d9bf83;display:inline-block;flex-shrink:0}
+    .premium-profile h1{font-family:var(--arabic);font-weight:800;font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.25;margin:0 0 17px;letter-spacing:-.04em;color:#f6f0e2}
+    html[lang="en"] .premium-profile h1{font-family:var(--display);font-size:clamp(3rem,6vw,5.4rem);letter-spacing:-.01em}
+    .profile-role{color:#d7bc80;font-size:.87rem;margin:0 0 22px;line-height:1.8}
+    .profile-intro{max-width:610px;font-size:.93rem;line-height:2.05;color:#c3c1b5;margin:0 0 29px}
+    .profile-primary{display:inline-flex;gap:28px;align-items:center;background:#d9c18c;color:#242620;padding:11px 19px;text-decoration:none;font-size:.77rem;border:1px solid #e0ca9c;border-radius:2px;transition:background .2s,transform .2s}
+    .profile-primary:hover{background:#ead8af;transform:translateY(-2px)}
+    .profile-signature{border-inline-start:1px solid #77705b60;padding-inline-start:35px;display:flex;flex-direction:column;justify-content:space-between;gap:27px;min-width:0}
+    .signature-mark{font:800 5.5rem/.95 var(--display);color:#d7bf8b;letter-spacing:-.07em;position:relative;display:block;margin:10px 0 20px;width:fit-content;direction:ltr}
+    .signature-mark>span{font:400 .8rem var(--mono);position:absolute;top:5px;right:-18px}
+    .profile-stat strong{display:block;font:500 3.2rem/1 var(--mono);color:#f3ecdc;margin-bottom:10px;letter-spacing:-.06em}
+    .profile-stat>span{font-size:.72rem;line-height:1.8;color:#b9b7a9;display:block;max-width:170px}
+    .profile-location{display:flex;gap:9px;align-items:baseline;font-size:.65rem;color:#b9b7a9;line-height:1.8}
+    .profile-body{background:#f1ecdf;color:#252821;padding:clamp(25px,4vw,50px) clamp(24px,5vw,64px)}
+    .profile-section-heading{display:flex;align-items:center;gap:30px;margin-bottom:23px}
+    .profile-section-index{font:500 .6rem/1.7 var(--mono);letter-spacing:.1em;color:#8b7955;margin:0 0 8px}
+    .profile-section-heading h2,.profile-connect h2{font-size:clamp(1.45rem,2.7vw,2rem);margin:0;line-height:1.5;font-weight:800;letter-spacing:-.025em}
+    .section-line{height:1px;background:#c9c1ad;flex:1}
+    .expertise-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .expertise-card{position:relative;border:1px solid #d4cbb7;background:#f8f4e9;padding:23px 25px;min-width:0;transition:border-color .2s,transform .2s}
+    .expertise-card:hover{border-color:#a88a53;transform:translateY(-3px)}
+    .expertise-number{font:500 .63rem var(--mono);color:#968563;display:block;margin-bottom:14px}
+    .expertise-card h3{font-size:.96rem;margin:0 0 8px;line-height:1.6;font-weight:700}
+    .expertise-card p{font-size:.8rem;line-height:1.95;color:#676658;margin:0}
+    .profile-experience{margin-top:43px}
+    .experience-card{border-inline-start:2px solid #ad8f54;padding:4px 23px 2px}
+    .experience-tag{display:flex;gap:8px;align-items:center;color:#877144;font-size:.68rem;margin-bottom:11px}
+    .experience-dot{width:5px;height:5px;border-radius:50%;background:#ad8f54;display:inline-block}
+    .experience-card h3{font-size:1.05rem;margin:0 0 11px;line-height:1.7}
+    .experience-card p{font-size:.86rem;line-height:2;color:#646457;margin:0;max-width:820px}
+    .profile-connect{margin-top:43px;padding-top:29px;border-top:1px solid #c9c1ad;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:30px}
+    .profile-connect .about-links{margin:0;justify-content:flex-end;gap:8px}
+    .profile-connect .external{border:1px solid #c2b9a3;background:transparent;color:#34382e;padding:9px 12px;font-size:.69rem;border-radius:2px;min-height:40px;transition:background .2s,color .2s}
+    .profile-connect .external:hover{background:#292d24;color:#f1ecdf;border-color:#292d24}
+    .premium-profile a:focus-visible{outline:2px solid #b89453;outline-offset:4px}
+    @media(max-width:850px){.premium-profile{padding:0 4vw;margin:30px auto 50px}.profile-hero{grid-template-columns:minmax(0,1fr) 175px;gap:30px}.profile-signature{padding-inline-start:25px}.profile-connect{grid-template-columns:1fr;gap:20px}.profile-connect .about-links{justify-content:flex-start}}
+    @media(max-width:600px){.profile-hero{grid-template-columns:1fr;gap:30px;padding:30px 25px}.premium-profile h1{font-size:2.65rem}.profile-signature{border-inline-start:0;border-top:1px solid #77705b60;padding:23px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;align-items:center}.signature-mark{display:none}.profile-stat strong{font-size:2.5rem}.profile-stat>span{font-size:.66rem}.profile-location{font-size:.65rem}.profile-intro{font-size:.85rem}.profile-body{padding:29px 23px}.expertise-grid{grid-template-columns:1fr}.expertise-card{padding:20px}.profile-section-heading{gap:20px}.profile-experience{margin-top:32px}.experience-card{padding-inline-start:18px}.experience-card p{font-size:.8rem}.profile-connect{margin-top:32px}.profile-connect .external{flex:1 1 auto;justify-content:center}.profile-role{font-size:.77rem}}
+
   </style>
 </head>
 
@@ -302,7 +360,7 @@
   <header class="masthead">
     <span class="mast-side" id="mast-section" lang="en">PROJECT INDEX</span>
     <a class="home-link" href="#projects" lang="en">TAMADUR’S FILES</a>
-    <div class="header-controls"><button type="button" id="sound-toggle" aria-pressed="true">الصوت: مفعّل</button><a class="nav-about" href="#about">عنّي ↗</a></div>
+    <div class="header-controls"><label class="language-control"><span class="sr-only">اللغة / Language</span><select id="language-select" aria-label="اللغة / Language"><option value="ar">العربية</option><option value="en">English</option></select></label><button type="button" id="sound-toggle" aria-pressed="true">الصوت: مفعّل</button><a class="nav-about" href="#about">عنّي ↗</a></div>
   </header>
 
   <main id="main">
@@ -317,36 +375,46 @@
 
     <section id="project-view" class="dossier" hidden></section>
 
-    <section id="about-view" class="about-sheet" hidden>
-      <article class="paper" dir="rtl">
-        <h1>تماضر سالم</h1>
-        <p>خريجة أمن معلومات، مقيمة في الرياض. أعمل على مشاريع تجمع بين أمن الأنظمة وتطوير الويب وتحويل المتطلبات التقنية إلى أدوات عملية.</p>
-
-        <h2>المهارات</h2>
-        <ul>
-          <li>أمن المعلومات ومراجعة الثغرات ومفاهيم المصادقة.</li>
-          <li>أمن واجهات البرمجة، والتحكم في الوصول، والتحقق من المدخلات.</li>
-          <li>تنظيم البيانات والتحقق منها وإعداد الوثائق والتقارير التقنية.</li>
-          <li>تنسيق المشاريع والعمل الجماعي من التخطيط إلى الاختبار والتسليم.</li>
-        </ul>
-
-        <h2>الخبرة العملية</h2>
-        <p>تدرّبت تعاونيًا لمدة 28 أسبوعًا في لجنة التنمية الاجتماعية، وساهمت في توثيق الإجراءات، ومراجعة السجلات التشغيلية والأمنية، وإعداد التقارير، والفحص الأولي للثغرات، والتحقق من بيانات المستفيدين.</p>
-
-        <div class="about-links">
+    <section id="about-view" class="about-sheet premium-profile" hidden>
+      <article class="profile-shell" dir="rtl">
+        <header class="profile-hero">
+          <div class="profile-hero-main">
+            <p class="profile-eyebrow"><span class="profile-dot" aria-hidden="true"></span><span>نبذة مهنية</span></p>
+            <h1>تماضر سالم</h1>
+            <p class="profile-role">أمن المعلومات · تطوير الويب</p>
+            <p class="profile-intro">خريجة أمن معلومات، مقيمة في الرياض. أعمل على مشاريع تجمع بين أمن الأنظمة وتطوير الويب وتحويل المتطلبات التقنية إلى أدوات عملية.</p>
+            <a class="profile-primary" href="https://drive.google.com/file/d/1kJ3kYv5VWjzwRg22uPv5Wqd3B-VLy98D/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span>السيرة الذاتية</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <aside class="profile-signature" aria-label="ملخص الخبرة">
+            <span class="signature-mark" aria-hidden="true">TS<span>✦</span></span>
+            <div class="profile-stat"><strong>28</strong><span>أسبوعًا من التدريب التعاوني</span></div>
+            <div class="profile-location"><span class="location-dot" aria-hidden="true"></span><span>الرياض، المملكة العربية السعودية</span></div>
+          </aside>
+        </header>
+        <div class="profile-body">
+          <section class="profile-expertise" aria-labelledby="expertise-heading">
+            <div class="profile-section-heading"><div><p class="profile-section-index">01 / EXPERTISE</p><h2 id="expertise-heading">المهارات</h2></div><span class="section-line" aria-hidden="true"></span></div>
+            <div class="expertise-grid"><article class="expertise-card"><span class="expertise-number" aria-hidden="true">01</span><h3>الأمن والتحليل</h3><p>أمن المعلومات ومراجعة الثغرات ومفاهيم المصادقة.</p></article><article class="expertise-card"><span class="expertise-number" aria-hidden="true">02</span><h3>حماية التطبيقات</h3><p>أمن واجهات البرمجة، والتحكم في الوصول، والتحقق من المدخلات.</p></article><article class="expertise-card"><span class="expertise-number" aria-hidden="true">03</span><h3>البيانات والتوثيق</h3><p>تنظيم البيانات والتحقق منها وإعداد الوثائق والتقارير التقنية.</p></article><article class="expertise-card"><span class="expertise-number" aria-hidden="true">04</span><h3>تنفيذ المشاريع</h3><p>تنسيق المشاريع والعمل الجماعي من التخطيط إلى الاختبار والتسليم.</p></article></div>
+          </section>
+          <section class="profile-experience" aria-labelledby="experience-heading">
+            <div class="profile-section-heading"><div><p class="profile-section-index">02 / EXPERIENCE</p><h2 id="experience-heading">الخبرة العملية</h2></div><span class="section-line" aria-hidden="true"></span></div>
+            <div class="experience-card"><div class="experience-tag"><span class="experience-dot" aria-hidden="true"></span><span>تدريب تعاوني</span></div><h3>لجنة التنمية الاجتماعية</h3><p>تدرّبت تعاونيًا لمدة 28 أسبوعًا في لجنة التنمية الاجتماعية، وساهمت في توثيق الإجراءات، ومراجعة السجلات التشغيلية والأمنية، وإعداد التقارير، والفحص الأولي للثغرات، والتحقق من بيانات المستفيدين.</p></div>
+          </section>
+          <section class="profile-connect" aria-labelledby="connect-heading"><div><p class="profile-section-index">03 / CONNECT</p><h2 id="connect-heading">لنتواصل</h2></div>        <div class="about-links">
           <a class="external" href="#projects">فهرس المشاريع <span class="arrow" aria-hidden="true">↗</span></a>
           <a class="external" href="https://drive.google.com/file/d/1kJ3kYv5VWjzwRg22uPv5Wqd3B-VLy98D/view?usp=sharing" target="_blank" rel="noopener noreferrer">السيرة الذاتية <span class="arrow" aria-hidden="true">↗</span></a>
           <a class="external" href="mailto:tmadersalem@gmail.com">البريد الإلكتروني</a>
           <a class="external" href="https://www.linkedin.com/in/tmader-salem-587ab0420" target="_blank" rel="noopener noreferrer">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
           <a class="external" href="https://github.com/anaaba00001-pixel" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+        </div></section>
         </div>
       </article>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span lang="en">TAMADUR SALEM</span>
-    <a href="https://github.com/anaaba00001-pixel" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+  <footer class="site-footer contact-footer" dir="ltr">
+    <div class="footer-social"><a href="https://www.linkedin.com/in/tmader-salem-587ab0420" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span class="footer-name">TAMADUR SALEM</span></div>
+    <address class="footer-contact"><a href="mailto:tmadersalem@gmail.com" dir="ltr">tmadersalem@gmail.com</a><a id="contact-phone" hidden dir="ltr"></a></address>
   </footer>
 
   <dialog id="lightbox" aria-labelledby="photo-caption">
@@ -507,6 +575,52 @@
     const projectNotes = {"dependency-guard": ["تسهيل فحص اعتماديات المشاريع ومساعدة المطوّر على تحديد الحزم التي تحتاج إلى تحديث.", "قد تحتوي الحزم الخارجية على ثغرات معروفة يصعب تتبّعها يدويًا؛ يجمع المشروع نتائج الفحص في واجهة واضحة.", ["فحص الاعتماديات", "تطوير React", "بناء API بـ Node.js", "تكامل OSV-Scanner", "عرض وتصدير النتائج"]], "secure-payment": ["تطبيق تدفق دفع تجريبي مع ضوابط أمنية واضحة، من إنشاء الطلب إلى متابعة حالة المعاملة.", "يحتاج دمج الدفع إلى حماية مسارات الطلبات والتحقق من المعاملات؛ يعالج النموذج هذه المتطلبات في PayPal Sandbox دون تخزين بيانات البطاقات.", ["Node.js وExpress", "PostgreSQL", "تكامل PayPal Sandbox", "المصادقة بـ JWT", "نمذجة التهديدات STRIDE"]], "tifl": ["تقديم تجربة تعليمية عربية تجمع الأنشطة التفاعلية مع أدوات متابعة لولي الأمر.", "تشتّت الأنشطة التعليمية وصعوبة متابعة استخدام الطفل؛ تجمع المنصة المحتوى وملفات الأطفال ووقت اللعب في مكان واحد.", ["HTML وCSS", "JavaScript", "PHP", "MySQL", "تصميم أنشطة تفاعلية"]], "fixflow": ["تنظيم دورة طلب الصيانة، من تقديم البلاغ عبر QR إلى تعيينه ومتابعة حالته.", "تشتّت البلاغات وصعوبة معرفة حالة كل طلب؛ يجمع النظام الطلبات في لوحة تتيح البحث والتصفية والمتابعة.", ["React", "Vite", "Supabase", "تصميم سير الطلبات", "تنظيم صلاحيات المستخدمين"]], "athar": ["إتاحة استكشاف الأعمال الفنية ومعلوماتها عبر تجربة متحف رقمي تفاعلي.", "عرض الأعمال كصور منفصلة يحدّ من فهم سياقها؛ يربط المشروع العمل الفني بمعلوماته داخل واجهة استكشاف.", ["HTML", "CSS", "JavaScript", "تصميم واجهات تفاعلية", "تنظيم المحتوى الفني"]], "capsule": ["تقديم ست قطع أثرية مع تاريخها وأهميتها في تجربة استكشاف تفاعلية.", "المعلومات التاريخية المتفرّقة تصعّب ربط القطعة بسياقها؛ يجمع المعرض القطع وشروحها في تجربة واحدة.", ["HTML", "CSS", "JavaScript", "تصميم انتقالات تفاعلية", "تنظيم المحتوى التاريخي"]], "muqabil": ["مساعدة الباحث عن عمل على ممارسة إجابات المقابلات ومراجعة أدائه قبل المقابلة الفعلية.", "يصعب التدرّب الفردي دون ملاحظات على الإجابات؛ توفّر المنصة أسئلة تدريب وتغذية راجعة وتقارير أداء.", ["تصميم تجربة المستخدم", "تنظيم سيناريوهات التدريب", "توظيف الذكاء الاصطناعي", "عرض ملاحظات الأداء"]], "hail-memory": ["عرض جوانب من تراث حائل عبر متحف رقمي يضم مجسّمات ومعارض تفاعلية.", "يصعب الوصول إلى بعض جوانب التراث واستكشافها عن بُعد؛ يقدّم المشروع محتوى تراثيًا ضمن تجربة رقمية.", ["JavaScript", "Node.js", "Supabase", "تنظيم المحتوى التراثي", "تصميم تجربة استكشاف"]], "marsad": ["تسهيل مراجعة التنبيهات الأمنية وتحديد الأولويات وتوثيق خطوات التحقيق.", "كثرة التنبيهات المنفصلة تصعّب تتبّع الحالات؛ تجمع اللوحة التنبيهات المرتبطة وتتيح حفظ حالة التحقيق والملاحظات.", ["Python", "Streamlit", "SQLite", "تحليل التنبيهات الأمنية", "التحقق من ملفات CSV"]], "order-payment-reconciliation": ["تسهيل مقارنة سجلات الطلبات والدفعات وتجميع نتائج المطابقة للمراجعة.", "المقارنة اليدوية بين ملفين تستغرق وقتًا وقد تفوّت اختلافات؛ تجمع الأداة نتائج المقارنة في تقرير يوضح السجلات التي تحتاج متابعة.", ["Excel", "تنظيم البيانات", "مطابقة السجلات", "مراجعة الفروقات", "إعداد التقارير"]]};
     projects.forEach(project => { [project.goal, project.problem, project.skills] = projectNotes[project.id]; project.tech = project.tech.slice(0, 5); });
 
+
+    const CONTACT_PHONE = ""; // Add the owner's confirmed number here, including country code.
+    const translations = {"TAMADUR’S FILES": ["ملفات تماضر", "TAMADUR’S FILES"], "TAMADUR SALEM · PORTFOLIO": ["تماضر سالم · معرض الأعمال", "TAMADUR SALEM · PORTFOLIO"], "PROJECT ARCHIVE": ["أرشيف المشاريع", "PROJECT ARCHIVE"], "TAMADUR SALEM": ["تماضر سالم", "TAMADUR SALEM"], "PROJECT INDEX": ["فهرس المشاريع", "PROJECT INDEX"], "PROJECT FILE": ["ملف المشروع", "PROJECT FILE"], "PROFILE": ["عنّي", "PROFILE"], "PROJECT SNAPSHOT": ["لقطة من المشروع", "PROJECT SNAPSHOT"], "عنّي ↗": ["عنّي ↗", "About me ↗"], "ملفات مختارة من مشاريعي في أمن المعلومات وتطوير الويب.": ["ملفات مختارة من مشاريعي في أمن المعلومات وتطوير الويب.", "Selected projects in information security and web development."], "تماضر سالم": ["تماضر سالم", "Tamadur Salem"], "خريجة أمن معلومات، مقيمة في الرياض. أعمل على مشاريع تجمع بين أمن الأنظمة وتطوير الويب وتحويل المتطلبات التقنية إلى أدوات عملية.": ["خريجة أمن معلومات، مقيمة في الرياض. أعمل على مشاريع تجمع بين أمن الأنظمة وتطوير الويب وتحويل المتطلبات التقنية إلى أدوات عملية.", "I am an Information Security graduate based in Riyadh. I build projects that combine system security and web development, turning technical requirements into practical tools."], "المهارات": ["المهارات", "Skills"], "أمن المعلومات ومراجعة الثغرات ومفاهيم المصادقة.": ["أمن المعلومات ومراجعة الثغرات ومفاهيم المصادقة.", "Information security, vulnerability review, and authentication concepts."], "أمن واجهات البرمجة، والتحكم في الوصول، والتحقق من المدخلات.": ["أمن واجهات البرمجة، والتحكم في الوصول، والتحقق من المدخلات.", "API security, access control, and input validation."], "تنظيم البيانات والتحقق منها وإعداد الوثائق والتقارير التقنية.": ["تنظيم البيانات والتحقق منها وإعداد الوثائق والتقارير التقنية.", "Data organization and validation, technical documentation, and reporting."], "تنسيق المشاريع والعمل الجماعي من التخطيط إلى الاختبار والتسليم.": ["تنسيق المشاريع والعمل الجماعي من التخطيط إلى الاختبار والتسليم.", "Project coordination and teamwork from planning through testing and delivery."], "الخبرة العملية": ["الخبرة العملية", "Experience"], "تدرّبت تعاونيًا لمدة 28 أسبوعًا في لجنة التنمية الاجتماعية، وساهمت في توثيق الإجراءات، ومراجعة السجلات التشغيلية والأمنية، وإعداد التقارير، والفحص الأولي للثغرات، والتحقق من بيانات المستفيدين.": ["تدرّبت تعاونيًا لمدة 28 أسبوعًا في لجنة التنمية الاجتماعية، وساهمت في توثيق الإجراءات، ومراجعة السجلات التشغيلية والأمنية، وإعداد التقارير، والفحص الأولي للثغرات، والتحقق من بيانات المستفيدين.", "During a 28-week cooperative placement at the Social Development Committee, I helped document procedures, review operational and security records, prepare reports, perform initial vulnerability checks, and validate beneficiary data."], "فهرس المشاريع": ["فهرس المشاريع", "Project index"], "السيرة الذاتية": ["السيرة الذاتية", "Resume"], "البريد الإلكتروني": ["البريد الإلكتروني", "Email"], "رقم الجوال": ["رقم الجوال", "Phone"], "← الفهرس": ["← الفهرس", "← Project index"], "الهدف من المشروع": ["الهدف من المشروع", "Project goal"], "المشكلة التي يعالجها": ["المشكلة التي يعالجها", "The problem it addresses"], "المهارات المستخدمة": ["المهارات المستخدمة", "Skills used"], "ما يتضمنه المشروع": ["ما يتضمنه المشروع", "Project features"], "التالي": ["التالي", "Next"], "الصوت: مفعّل": ["الصوت: مفعّل", "Sound: on"], "الصوت: مكتوم": ["الصوت: مكتوم", "Sound: off"], "صورة من المشروع": ["صورة من المشروع", "Project image"], "لقطة توضّح الواجهة أو أهم ميزة": ["لقطة توضّح الواجهة أو أهم ميزة", "A view of the interface or a key feature"], "معاينة المشروع": ["معاينة المشروع", "Project preview"], "اختيار صورة من جهازك": ["اختيار صورة من جهازك", "Choose an image"], "الصورة المختارة معاينة على جهازك. لإظهارها للزوار أضيفيها إلى مجلد assets.": ["الصورة المختارة معاينة على جهازك. لإظهارها للزوار أضيفيها إلى مجلد assets.", "Selected images are previews on your device. Add them to the assets folder to display them to visitors."], "مساحة لصورة المشروع": ["مساحة لصورة المشروع", "Your project image goes here"], "صورة توضيحية · استبدليها بلقطة من مشروعك": ["صورة توضيحية · استبدليها بلقطة من مشروعك", "Illustration · replace with a project screenshot"], "اختاري صورة PNG أو JPG أو WebP": ["اختاري صورة PNG أو JPG أو WebP", "Choose a PNG, JPG, or WebP image"], "معاينة الصورة المختارة · على هذا الجهاز": ["معاينة الصورة المختارة · على هذا الجهاز", "Selected image preview · on this device"], "ملفات المشاريع": ["ملفات المشاريع", "Project files"], "تكبير صورة المشروع": ["تكبير صورة المشروع", "Enlarge project image"], "التنقل بين المشاريع": ["التنقل بين المشاريع", "Project navigation"], "إغلاق الصورة": ["إغلاق الصورة", "Close image"], "فتح الأداة": ["فتح الأداة", "Open tool"], "مستودع GitHub": ["مستودع GitHub", "GitHub repository"], "فتح المشروع": ["فتح المشروع", "Open project"], "فتح المنصة": ["فتح المنصة", "Open platform"], "فتح النظام": ["فتح النظام", "Open system"], "استكشاف المتحف": ["استكشاف المتحف", "Explore museum"], "فتح المعرض": ["فتح المعرض", "Open exhibition"]};
+    Object.assign(translations,{"نبذة مهنية": ["نبذة مهنية", "Professional profile"], "أمن المعلومات · تطوير الويب": ["أمن المعلومات · تطوير الويب", "Information security · Web development"], "ملخص الخبرة": ["ملخص الخبرة", "Experience summary"], "أسبوعًا من التدريب التعاوني": ["أسبوعًا من التدريب التعاوني", "weeks of cooperative training"], "الرياض، المملكة العربية السعودية": ["الرياض، المملكة العربية السعودية", "Riyadh, Saudi Arabia"], "الأمن والتحليل": ["الأمن والتحليل", "Security & analysis"], "حماية التطبيقات": ["حماية التطبيقات", "Application security"], "البيانات والتوثيق": ["البيانات والتوثيق", "Data & documentation"], "تنفيذ المشاريع": ["تنفيذ المشاريع", "Project delivery"], "تدريب تعاوني": ["تدريب تعاوني", "Cooperative training"], "لجنة التنمية الاجتماعية": ["لجنة التنمية الاجتماعية", "Social Development Committee"], "لنتواصل": ["لنتواصل", "Let’s connect"], "01 / EXPERTISE": ["01 / المهارات", "01 / EXPERTISE"], "02 / EXPERIENCE": ["02 / الخبرة", "02 / EXPERIENCE"], "03 / CONNECT": ["03 / التواصل", "03 / CONNECT"]});
+    const englishProjects = {"dependency-guard": ["Software security", "Dependency vulnerability scanning", "An Arabic web tool that scans project dependency files for known package vulnerabilities using OSV-Scanner.", "Make dependency scanning accessible and help developers identify packages that need updates.", "Third-party packages can contain known vulnerabilities that are hard to track manually. The tool brings scan findings into one clear interface.", ["Dependency scanning", "React development", "Node.js API development", "OSV-Scanner integration", "Results and exports"], ["Users upload a dependency file and start a scan.", "The interface displays findings and severity levels, with export options."]], "secure-payment": ["Graduation project", "Payment integration in a test environment", "An educational prototype that connects a web application to PayPal Sandbox and displays the transaction status after a test payment.", "Implement a test payment flow with clear security controls, from order creation to transaction tracking.", "Payment integration requires protected request routes and transaction verification. The prototype addresses these needs in PayPal Sandbox without storing card data.", ["Node.js and Express", "PostgreSQL", "PayPal Sandbox integration", "JWT authentication", "STRIDE threat modeling"], ["Covers payment order creation, capture, and transaction notifications.", "Includes authentication, rate limiting, notification verification, and STRIDE threat modeling."]], "tifl": ["Learning platform", "Tifl — learning through play in Arabic", "An Arabic learning platform for children with 32 interactive games across four sections, alongside lessons, activities, and stories.", "Provide an Arabic learning experience that combines interactive activities with parental monitoring tools.", "Scattered learning activities make it difficult to track a child’s use. The platform brings content, child profiles, and playtime into one place.", ["HTML and CSS", "JavaScript", "PHP", "MySQL", "Interactive learning design"], ["Activities cover mathematics, Arabic, art, and digital safety.", "The parent dashboard supports child profiles and playtime tracking."]], "fixflow": ["Maintenance automation", "FixFlow — QR-based maintenance requests", "An Arabic system that simplifies maintenance reporting through QR codes and tracks requests from a single dashboard.", "Organize maintenance requests from QR reporting through assignment and status tracking.", "Scattered reports make request status difficult to follow. The system brings requests into a dashboard with search, filters, and tracking.", ["React", "Vite", "Supabase", "Request workflow design", "User permission design"], ["The dashboard supports creating, searching, filtering, assigning, and tracking requests."]], "athar": ["Digital museum", "Athar — an art and artifacts museum", "A web museum where visitors explore real artworks and learn about each piece through an interactive interface.", "Make artworks and their information accessible through an interactive digital museum.", "Displaying artworks as isolated images limits their context. The project connects each piece with its information in an exploration interface.", ["HTML", "CSS", "JavaScript", "Interactive interface design", "Art content organization"], []], "capsule": ["History exhibition", "Capsule — an interactive history exhibition", "An exhibition of six real artifacts that introduces their history and significance, with interactive transitions between exhibition views.", "Present six artifacts and their historical significance in an interactive exploration experience.", "Scattered historical information makes it difficult to connect artifacts with their context. The exhibition brings the pieces and their explanations together.", ["HTML", "CSS", "JavaScript", "Interactive transitions", "Historical content organization"], []], "muqabil": ["Interview preparation", "Muqabil — preparing for job interviews", "An AI-assisted platform for practicing interview questions, receiving feedback on answers, and reviewing performance reports.", "Help job seekers practice interview answers and review their performance before a real interview.", "Individual practice is difficult without feedback. The platform provides practice questions, feedback, and performance reports.", ["User experience design", "Practice scenario design", "Applying AI", "Performance feedback presentation"], []], "hail-memory": ["Digital heritage", "Hail Memory", "A digital museum that presents aspects of Hail’s heritage through 3D models and interactive exhibitions.", "Present aspects of Hail’s heritage in a digital museum with models and interactive exhibitions.", "Some aspects of heritage are difficult to access and explore remotely. The project presents heritage content through a digital experience.", ["JavaScript", "Node.js", "Supabase", "Heritage content organization", "Exploration experience design"], []], "marsad": ["Security alert analysis", "Marsad — SOC alert triage", "An Arabic dashboard that groups related alerts into cases, shows review priorities, and saves investigation status and notes.", "Simplify security alert review, prioritize cases, and document investigation steps.", "Large numbers of separate alerts make cases difficult to track. The dashboard groups related alerts and saves investigation status and notes.", ["Python", "Streamlit", "SQLite", "Security alert analysis", "CSV validation"], ["Supports CSV uploads and validation, detection rule review, and exporting results."]], "order-payment-reconciliation": ["Data reconciliation", "Order and Payment Reconciliation", "A tool that compares order and payment records from two Excel files and consolidates the reconciliation results into one report for review and follow-up.", "Simplify order and payment comparisons and bring reconciliation results together for review.", "Manual comparison between two files takes time and can miss differences. The tool consolidates results into a report that highlights records requiring follow-up.", ["Excel", "Data organization", "Record matching", "Difference review", "Report preparation"], []]};
+    projects.forEach(project => {
+      const copy = englishProjects[project.id];
+      ['category','headline','summary','goal','problem'].forEach((key,i)=>{translations[project[key]]=[project[key],copy[i]];});
+      project.skills.forEach((value,i)=>{translations[value]=[value,copy[5][i]];});
+      project.details.forEach((value,i)=>{translations[value]=[value,copy[6][i]];});
+    });
+    let language = 'ar';
+    try { language = localStorage.getItem('portfolio-language') === 'en' ? 'en' : 'ar'; } catch {}
+    const textSources = new WeakMap();
+    const attributeSources = new WeakMap();
+    function t(value) { return translations[value]?.[language === 'en' ? 1 : 0] || value; }
+    function localize(root = document.body) {
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        if (['SCRIPT','STYLE','OPTION'].includes(node.parentElement?.tagName)) continue;
+        let record = textSources.get(node);
+        if (!record || node.nodeValue !== record.last) record = {source:node.nodeValue};
+        const trimmed = record.source.trim();
+        record.last = trimmed ? record.source.replace(trimmed, t(trimmed)) : record.source;
+        node.nodeValue = record.last; textSources.set(node,record);
+      }
+      root.querySelectorAll('[aria-label],[alt]').forEach(element=>{
+        let records=attributeSources.get(element)||{};
+        ['aria-label','alt'].forEach(attr=>{
+          const current=element.getAttribute(attr); if(current===null)return;
+          let record=records[attr]; if(!record || current!==record.last)record={source:current};
+          record.last=t(record.source);element.setAttribute(attr,record.last);records[attr]=record;
+        }); attributeSources.set(element,records);
+      });
+      root.querySelectorAll('[dir]').forEach(element=>{
+        if (element.closest('.contact-footer') || element.matches('[lang="en"],.tech-list')) return;
+        element.dir=language==='ar'?'rtl':'ltr';
+      });
+      root.querySelectorAll('[lang="ar"]').forEach(element=>{element.lang=language;});
+      document.documentElement.lang=language;
+      document.documentElement.dir=language==='ar'?'rtl':'ltr';
+      document.querySelector('#language-select').value=language;
+      document.querySelector('meta[name="description"]').content=language==='ar'?'معرض مشاريع تماضر سالم في أمن المعلومات وتطوير الويب':'Tamadur Salem’s information security and web development portfolio';
+    }
+
     const folders = document.querySelector("#folders");
     const index = document.querySelector("#index-view");
     const dossier = document.querySelector("#project-view");
@@ -526,7 +640,7 @@
     soundToggle.addEventListener('click', () => {
       soundEnabled = !soundEnabled;
       soundToggle.setAttribute('aria-pressed', String(soundEnabled));
-      soundToggle.textContent = soundEnabled ? 'الصوت: مفعّل' : 'الصوت: مكتوم';
+      soundToggle.textContent = t(soundEnabled ? 'الصوت: مفعّل' : 'الصوت: مكتوم');
       if (!soundEnabled) photoSound.pause();
     });
     document.addEventListener('click', event => {
@@ -591,12 +705,7 @@
                     ` : ""}
                   </div>
 
-                  ${project.english ? `
-                    <div class="english-summary" lang="en" dir="ltr">
-                      <h2>${project.english.title}</h2>
-                      <p>${project.english.summary}</p>
-                    </div>
-                  ` : ""}
+
 
                   ${project.tech.length ? `
                     <div class="tech-list" lang="en">
@@ -634,21 +743,21 @@
       const photo = plate.querySelector("img");
       const placeholder = photoArea.querySelector(".photo-placeholder");
       const caption = photoArea.querySelector(".image-caption");
-      const photoLabel = `صورة مشروع ${project.headline}`;
+      const photoLabel = language === 'ar' ? `صورة مشروع ${project.headline}` : `Project image: ${englishProjects[project.id][1]}`;
       photo.alt = photoLabel;
       photo.onload = () => { photo.hidden = false; placeholder.hidden = true; plate.disabled = false; };
-      photo.onerror = () => { photo.hidden = true; placeholder.hidden = false; plate.disabled = true; caption.textContent = "مساحة لصورة المشروع"; };
+      photo.onerror = () => { photo.hidden = true; placeholder.hidden = false; plate.disabled = true; caption.textContent = t("مساحة لصورة المشروع"); };
       photo.src = `assets/${encodeURIComponent(project.image)}`;
-      caption.textContent = ['dependency-guard','secure-payment','tifl','fixflow'].includes(project.id) ? 'صورة توضيحية · استبدليها بلقطة من مشروعك' : 'مساحة لصورة المشروع';
+      caption.textContent = ['dependency-guard','secure-payment','tifl','fixflow'].includes(project.id) ? t('صورة توضيحية · استبدليها بلقطة من مشروعك') : t('مساحة لصورة المشروع');
       let previewURL;
       photoArea.querySelector("input").addEventListener("change", event => {
         const file = event.target.files[0];
         if (!file) return;
-        if (!['image/png','image/jpeg','image/webp'].includes(file.type)) { caption.textContent = "اختاري صورة PNG أو JPG أو WebP"; return; }
+        if (!['image/png','image/jpeg','image/webp'].includes(file.type)) { caption.textContent = t("اختاري صورة PNG أو JPG أو WebP"); return; }
         if (previewURL) URL.revokeObjectURL(previewURL);
         previewURL = URL.createObjectURL(file);
         photo.src = previewURL;
-        caption.textContent = "معاينة الصورة المختارة · على هذا الجهاز";
+        caption.textContent = t("معاينة الصورة المختارة · على هذا الجهاز");
       });
       plate.addEventListener("click", () => {
         dialogImage.src = photo.src;
@@ -672,7 +781,8 @@
       if (project) renderProject(project);
 
       sectionLabel.textContent = project ? "PROJECT FILE" : isAbout ? "PROFILE" : "PROJECT INDEX";
-      document.title = project ? `${project.name} — TAMADUR’S FILES` : archiveTitle;
+      localize();
+      document.title = project ? `${language === 'ar' ? project.headline : englishProjects[project.id][1]} — ${t('TAMADUR’S FILES')}` : language === 'ar' ? archiveTitle : 'TAMADUR’S FILES — Project portfolio';
       window.scrollTo({ top: 0, behavior: "instant" });
 
       if (shouldFocus) {
@@ -688,7 +798,15 @@
       if (event.target === dialog) dialog.close();
     });
     window.addEventListener("hashchange", () => renderRoute(true));
+    const phone = document.querySelector('#contact-phone');
+    if (CONTACT_PHONE.trim()) { phone.hidden=false; phone.textContent=CONTACT_PHONE; phone.href='tel:'+CONTACT_PHONE.replace(/[^+0-9]/g,''); }
+    document.querySelector('#language-select').addEventListener('change', event => {
+      language=event.target.value;
+      try { localStorage.setItem('portfolio-language',language); } catch {}
+      renderRoute();
+    });
     renderRoute();
   </script>
 </body>
 </html>
+
