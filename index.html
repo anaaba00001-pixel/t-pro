@@ -202,6 +202,11 @@
     .plate:hover { transform: rotate(0) scale(1.025); z-index: 1; }
     .plate img { display: block; width: 100%; aspect-ratio: 1.45; object-fit: cover; background: #beb9ac; }
     .plate span { position: absolute; right: 12px; bottom: 0; font: 500 1rem/1.2 var(--mono); color: #252621; }
+    .gallery-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin-top: 12px; }
+    .gallery-thumb { border: 1px solid #b9b09b; background: #f5f0e4; padding: 3px; cursor: pointer; border-radius: 3px; }
+    .gallery-thumb img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .gallery-thumb[aria-current="true"] { border-color: #252621; box-shadow: 0 0 0 1px #252621; }
+    .gallery-thumb:focus-visible { outline: 2px solid #73572e; outline-offset: 2px; }
     .tech-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 21px; }
     .tech-list span { border: 1px solid #777062; padding: 5px 7px; font: 500 .65rem/1.1 var(--mono); }
     .paper-bottom { margin-top: 31px; border-top: 1px solid #3b372c4a; padding-top: 21px; display: flex; flex-wrap: wrap; gap: 9px; }
@@ -486,6 +491,7 @@
         details: ["تتيح اللوحة إنشاء الطلبات والبحث فيها وتصفيتها وتعيينها ومتابعة حالتها."],
         tech: ["React", "Vite", "Supabase"],
         image: "fixflow.webp",
+        images: ["fixflow-1.jpeg", "fixflow-2.jpeg", "fixflow-3.jpeg", "fixflow-4.jpeg"],
         links: [["فتح النظام", "https://fixflow-three-khaki.vercel.app"]]
       },
       {
@@ -499,6 +505,7 @@
         details: [],
         tech: ["HTML", "CSS", "JavaScript"],
         image: "athar.webp",
+        images: ["athar.jpeg"],
         links: [["استكشاف المتحف", "https://anaaba00001-pixel.github.io/museu-0/"]]
       },
       {
@@ -512,6 +519,7 @@
         details: [],
         tech: ["HTML", "CSS", "JavaScript"],
         image: "capsule.webp",
+        images: ["capsule.jpeg"],
         links: [["فتح المعرض", "https://anaaba00001-pixel.github.io/-/"]]
       },
       {
@@ -525,6 +533,7 @@
         details: [],
         tech: [],
         image: "muqabil.webp",
+        images: ["muqabil-1.jpeg", "muqabil-2.jpeg"],
         links: [["فتح المنصة", "https://muqabil.vercel.app/"]]
       },
       {
@@ -551,6 +560,7 @@
         details: ["تدعم رفع ملفات CSV والتحقق منها، ومراجعة أداء قواعد الكشف، وتصدير النتائج."],
         tech: ["Python", "Streamlit", "SQLite"],
         image: "marsad.webp",
+        images: ["marsad-1.jpeg", "marsad-2.jpeg"],
         links: [["مستودع GitHub", "https://github.com/anaaba00001-pixel/soc-alert-triage-analytics-arabic"]]
       },
       {
@@ -568,12 +578,13 @@
         details: [],
         tech: ["Excel"],
         image: "order-payment-reconciliation.webp",
+        images: ["reconciliation.jpeg"],
         links: []
       }
     ];
 
     const projectNotes = {"dependency-guard": ["تسهيل فحص اعتماديات المشاريع ومساعدة المطوّر على تحديد الحزم التي تحتاج إلى تحديث.", "قد تحتوي الحزم الخارجية على ثغرات معروفة يصعب تتبّعها يدويًا؛ يجمع المشروع نتائج الفحص في واجهة واضحة.", ["فحص الاعتماديات", "تطوير React", "بناء API بـ Node.js", "تكامل OSV-Scanner", "عرض وتصدير النتائج"]], "secure-payment": ["تطبيق تدفق دفع تجريبي مع ضوابط أمنية واضحة، من إنشاء الطلب إلى متابعة حالة المعاملة.", "يحتاج دمج الدفع إلى حماية مسارات الطلبات والتحقق من المعاملات؛ يعالج النموذج هذه المتطلبات في PayPal Sandbox دون تخزين بيانات البطاقات.", ["Node.js وExpress", "PostgreSQL", "تكامل PayPal Sandbox", "المصادقة بـ JWT", "نمذجة التهديدات STRIDE"]], "tifl": ["تقديم تجربة تعليمية عربية تجمع الأنشطة التفاعلية مع أدوات متابعة لولي الأمر.", "تشتّت الأنشطة التعليمية وصعوبة متابعة استخدام الطفل؛ تجمع المنصة المحتوى وملفات الأطفال ووقت اللعب في مكان واحد.", ["HTML وCSS", "JavaScript", "PHP", "MySQL", "تصميم أنشطة تفاعلية"]], "fixflow": ["تنظيم دورة طلب الصيانة، من تقديم البلاغ عبر QR إلى تعيينه ومتابعة حالته.", "تشتّت البلاغات وصعوبة معرفة حالة كل طلب؛ يجمع النظام الطلبات في لوحة تتيح البحث والتصفية والمتابعة.", ["React", "Vite", "Supabase", "تصميم سير الطلبات", "تنظيم صلاحيات المستخدمين"]], "athar": ["إتاحة استكشاف الأعمال الفنية ومعلوماتها عبر تجربة متحف رقمي تفاعلي.", "عرض الأعمال كصور منفصلة يحدّ من فهم سياقها؛ يربط المشروع العمل الفني بمعلوماته داخل واجهة استكشاف.", ["HTML", "CSS", "JavaScript", "تصميم واجهات تفاعلية", "تنظيم المحتوى الفني"]], "capsule": ["تقديم ست قطع أثرية مع تاريخها وأهميتها في تجربة استكشاف تفاعلية.", "المعلومات التاريخية المتفرّقة تصعّب ربط القطعة بسياقها؛ يجمع المعرض القطع وشروحها في تجربة واحدة.", ["HTML", "CSS", "JavaScript", "تصميم انتقالات تفاعلية", "تنظيم المحتوى التاريخي"]], "muqabil": ["مساعدة الباحث عن عمل على ممارسة إجابات المقابلات ومراجعة أدائه قبل المقابلة الفعلية.", "يصعب التدرّب الفردي دون ملاحظات على الإجابات؛ توفّر المنصة أسئلة تدريب وتغذية راجعة وتقارير أداء.", ["تصميم تجربة المستخدم", "تنظيم سيناريوهات التدريب", "توظيف الذكاء الاصطناعي", "عرض ملاحظات الأداء"]], "hail-memory": ["عرض جوانب من تراث حائل عبر متحف رقمي يضم مجسّمات ومعارض تفاعلية.", "يصعب الوصول إلى بعض جوانب التراث واستكشافها عن بُعد؛ يقدّم المشروع محتوى تراثيًا ضمن تجربة رقمية.", ["JavaScript", "Node.js", "Supabase", "تنظيم المحتوى التراثي", "تصميم تجربة استكشاف"]], "marsad": ["تسهيل مراجعة التنبيهات الأمنية وتحديد الأولويات وتوثيق خطوات التحقيق.", "كثرة التنبيهات المنفصلة تصعّب تتبّع الحالات؛ تجمع اللوحة التنبيهات المرتبطة وتتيح حفظ حالة التحقيق والملاحظات.", ["Python", "Streamlit", "SQLite", "تحليل التنبيهات الأمنية", "التحقق من ملفات CSV"]], "order-payment-reconciliation": ["تسهيل مقارنة سجلات الطلبات والدفعات وتجميع نتائج المطابقة للمراجعة.", "المقارنة اليدوية بين ملفين تستغرق وقتًا وقد تفوّت اختلافات؛ تجمع الأداة نتائج المقارنة في تقرير يوضح السجلات التي تحتاج متابعة.", ["Excel", "تنظيم البيانات", "مطابقة السجلات", "مراجعة الفروقات", "إعداد التقارير"]]};
-    projects.forEach(project => { [project.goal, project.problem, project.skills] = projectNotes[project.id]; project.tech = project.tech.slice(0, 5); });
+    projects.forEach(project => { [project.goal, project.problem, project.skills] = projectNotes[project.id]; project.tech = project.tech.slice(0, 5); project.images ||= [project.image]; });
 
 
     const CONTACT_PHONE = ""; // Add the owner's confirmed number here, including country code.
@@ -688,6 +699,7 @@
                     <div class="photo-placeholder" dir="rtl"><svg width="52" height="52" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="8" width="38" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="4" stroke="currentColor" stroke-width="1.5"/><path d="m6 34 11-10 8 7 7-11 10 14" stroke="currentColor" stroke-width="1.5"/></svg><strong>صورة من المشروع</strong><small>لقطة توضّح الواجهة أو أهم ميزة</small></div>
                     <span aria-hidden="true">↗</span>
                   </button>
+                  <div class="gallery-strip" aria-label="Project screenshots"></div>
                   <p class="image-caption" dir="rtl">معاينة المشروع</p>
                   <label class="image-picker" dir="rtl">اختيار صورة من جهازك<input type="file" accept="image/png,image/jpeg,image/webp" class="image-input"></label>
                   <p class="image-help" dir="rtl">الصورة المختارة معاينة على جهازك. لإظهارها للزوار أضيفيها إلى مجلد assets.</p>
@@ -742,13 +754,25 @@
       const plate = photoArea.querySelector(".plate");
       const photo = plate.querySelector("img");
       const placeholder = photoArea.querySelector(".photo-placeholder");
+      const galleryStrip = photoArea.querySelector(".gallery-strip");
       const caption = photoArea.querySelector(".image-caption");
       const photoLabel = language === 'ar' ? `صورة مشروع ${project.headline}` : `Project image: ${englishProjects[project.id][1]}`;
       photo.alt = photoLabel;
       photo.onload = () => { photo.hidden = false; placeholder.hidden = true; plate.disabled = false; };
       photo.onerror = () => { photo.hidden = true; placeholder.hidden = false; plate.disabled = true; caption.textContent = t("مساحة لصورة المشروع"); };
-      photo.src = `assets/${encodeURIComponent(project.image)}`;
-      caption.textContent = ['dependency-guard','secure-payment','tifl','fixflow'].includes(project.id) ? t('صورة توضيحية · استبدليها بلقطة من مشروعك') : t('مساحة لصورة المشروع');
+      const showProjectImage = (imageName, imageIndex) => {
+        photo.src = `assets/${encodeURIComponent(imageName)}`;
+        galleryStrip.querySelectorAll('.gallery-thumb').forEach((thumb, index) => thumb.setAttribute('aria-current', String(index === imageIndex)));
+      };
+      galleryStrip.innerHTML = project.images.map((imageName, index) => `
+        <button type="button" class="gallery-thumb" aria-label="${language === 'ar' ? `عرض الصورة ${index + 1}` : `View image ${index + 1}`}" aria-current="${index === 0}">
+          <img src="assets/${encodeURIComponent(imageName)}" alt="" loading="lazy">
+        </button>
+      `).join('');
+      galleryStrip.hidden = project.images.length < 2;
+      galleryStrip.querySelectorAll('.gallery-thumb').forEach((thumb, index) => thumb.addEventListener('click', () => showProjectImage(project.images[index], index)));
+      showProjectImage(project.images[0], 0);
+      caption.textContent = t('معاينة المشروع');
       let previewURL;
       photoArea.querySelector("input").addEventListener("change", event => {
         const file = event.target.files[0];
@@ -809,4 +833,3 @@
   </script>
 </body>
 </html>
-
